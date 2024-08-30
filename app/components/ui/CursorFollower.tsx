@@ -43,12 +43,14 @@ export default function CursorFollower() {
 
   return (
     <div
-      className="hidden lg:block absolute translate-x-[-50%] translate-y-[-50%] pointer-events-none z-50"
-      style={{ top: cursorY, left: cursorX }}>
+      className="pointer-events-none absolute z-40 hidden translate-x-[-50%] translate-y-[-50%] lg:block"
+      style={{ top: cursorY, left: cursorX }}
+    >
       <div
-        className={`h-16 w-16 block border border-gray-900/50 rounded-full transition-all ${
+        className={`block h-16 w-16 rounded-full border border-gray-900/50 transition-all ${
           hovered ? "h-24 w-24" : ""
-        } ${bigHovered ? "h-48 w-48" : ""}`}></div>
+        } ${bigHovered ? "h-48 w-48" : ""}`}
+      ></div>
     </div>
   );
 }
