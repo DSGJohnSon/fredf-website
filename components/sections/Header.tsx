@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import LinkHeader from "../ui/LinkHeader";
+import LinkHeader from "../ui-self/LinkHeader";
 
 export default function Header() {
   const [isMounting, setIsMounting] = useState<boolean>(true);
@@ -20,9 +20,7 @@ export default function Header() {
   }, []);
 
   return (
-    <div
-      className={`fixed left-1/2 top-8 z-50 flex -translate-x-1/2 items-center gap-4 rounded-full border border-gray-400 bg-white p-2 px-4 shadow-[0_0_60px_-15px_rgba(0,0,0,0.1)] md:p-4 md:px-8 md:pl-4`}
-    >
+    <div className="fixed left-1/2 top-8 z-50 flex -translate-x-1/2 items-center gap-4 rounded-full border border-gray-400 bg-white/50 backdrop-blur-lg p-2 px-4 shadow-[0_0_60px_-15px_rgba(0,0,0,0.1)] md:p-2 md:px-6 md:pl-2 disabled-hovered-object">
       <div className="hidden md:block">
         <Image
           src={"/images/logos/logo.png"}
@@ -32,7 +30,7 @@ export default function Header() {
         />
       </div>
       <div>
-        <nav className="flex items-center gap-8">
+        <nav className="flex items-center">
           <li className="list-none">
             <LinkHeader text="About" href="/" title="Accueil" />
           </li>

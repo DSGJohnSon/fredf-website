@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
-import CursorFollower from "./components/ui/CursorFollower";
+import CursorFollower from "../components/ui-self/CursorFollower";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Header from "./components/sections/Header";
+import Header from "../components/sections/Header";
 
 const font = Manrope({ subsets: ["latin"] });
 
