@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import HeroHeader from "./components/sections/HeroHeader";
+import HeroHeader from "../components/sections/HeroHeader";
 
 export default function Home() {
   const [isMounting, setIsMounting] = useState<boolean>(true);
@@ -15,9 +15,10 @@ export default function Home() {
   return (
     <div
       className={`${
-        isMounting ? "overflow-y-hidden h-screen pointer-events-none" : ""
+        isMounting ? "pointer-events-none h-screen overflow-y-hidden" : ""
       }`}>
       <HeroHeader isMounting={isMounting} />
+      <div className="h-screen bg-rose-50"></div>
     </div>
   );
 }
