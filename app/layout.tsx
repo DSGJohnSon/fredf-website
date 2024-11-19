@@ -18,14 +18,14 @@ export const metadata: Metadata = {
       {
         rel: "icon",
         media: "(prefers-color-scheme: light)",
-        type: "image/png",
-        url: "/images/logos/logo.png",
+        type: "image/webp",
+        url: "/images/logos/logo.webp",
       },
       {
         rel: "icon",
         media: "(prefers-color-scheme: dark)",
-        type: "image/png",
-        url: "/images/logos/logo.png",
+        type: "image/webp",
+        url: "/images/logos/logo.webp",
       },
     ],
   },
