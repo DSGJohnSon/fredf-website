@@ -5,6 +5,7 @@ import CursorFollower from "../components/ui-self/CursorFollower";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "../components/sections/Header";
+import { ThemeProvider } from "@/components/ui-self/ThemeProvider";
 
 const font = Manrope({ subsets: ["latin"] });
 
@@ -37,11 +38,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`relative ${font.className} text-gray-900`}>
-        <Header />
-        <CursorFollower />
-        {children}
-        <SpeedInsights />
+      <body className={`relative ${font.className} dark:bg-slate-950`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange>
+          <Header />
+          <CursorFollower />
+          {children}
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
       <Analytics />
     </html>

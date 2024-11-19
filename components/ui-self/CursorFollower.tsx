@@ -59,7 +59,7 @@ export default function CursorFollower() {
       style={{ top: cursorY, left: cursorX }}>
       <div
         className={cn(
-          "block h-16 w-16 rounded-full border border-gray-900/50 transition-all",
+          "block h-16 w-16 rounded-full border border-slate-900/50 transition-all",
           hovered ? "h-24 w-24" : "",
           bigHovered ? "h-48 w-48" : "",
           disabledCursor ? "w-0 h-0" : ""

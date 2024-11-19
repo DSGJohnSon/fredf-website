@@ -18,7 +18,6 @@ export default function Home() {
         isMounting ? "pointer-events-none h-screen overflow-y-hidden" : ""
       }`}>
       <HeroHeader isMounting={isMounting} />
-      <div className="h-screen bg-rose-50"></div>
     </div>
   );
 }
