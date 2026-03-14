@@ -12,22 +12,31 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+type ViewTransitionDocument = Document & {
+  startViewTransition?: (
+    callback: () => void | Promise<void>,
+  ) => {
+    ready: Promise<void>;
+  };
+};
+
 export function ModeToggle() {
   const { setTheme } = useTheme();
 
   const handleSetTheme = async (theme: string) => {
+    const viewTransitionDocument = document as ViewTransitionDocument;
     const btn = document.querySelector("button[aria-label='Toggle theme']");
     if (!btn) return;
 
     if (
-      !document.startViewTransition ||
+      !viewTransitionDocument.startViewTransition ||
       window.matchMedia("(prefers-reduced-motion: reduce)").matches
     ) {
       setTheme(theme);
       return;
     }
 
-    await document.startViewTransition(() => {
+    await viewTransitionDocument.startViewTransition(() => {
       setTheme(theme);
     }).ready;
 

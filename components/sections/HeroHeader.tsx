@@ -86,7 +86,7 @@ export default function HeroHeader() {
           transition={{ duration: 1, delay: 0.4 }}
           className="text-center text-6xl uppercase lg:text-8xl font-profont"
         >
-          Hi I'm
+          Hi I&apos;m
           <span className="big-hovered-object fred-hover cursor-default text-rose-500">
             {" "}
             Fred
