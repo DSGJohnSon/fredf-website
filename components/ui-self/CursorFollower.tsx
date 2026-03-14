@@ -56,14 +56,16 @@ export default function CursorFollower() {
   return (
     <div
       className="pointer-events-none absolute z-40 hidden translate-x-[-50%] translate-y-[-50%] lg:block"
-      style={{ top: cursorY, left: cursorX }}>
+      style={{ top: cursorY, left: cursorX }}
+    >
       <div
         className={cn(
-          "block h-16 w-16 rounded-full border border-slate-900/50 transition-all",
+          "block h-16 w-16 rounded-full border border-zinc-900/50 dark:border-zinc-50/50 transition-all",
           hovered ? "h-24 w-24" : "",
           bigHovered ? "h-48 w-48" : "",
-          disabledCursor ? "w-0 h-0" : ""
-        )}></div>
+          disabledCursor ? "w-0 h-0 opacity-0" : "",
+        )}
+      ></div>
     </div>
   );
 }

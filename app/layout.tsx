@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import CursorFollower from "../components/ui-self/CursorFollower";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "../components/sections/Header";
 import { ThemeProvider } from "@/components/ui-self/ThemeProvider";
+import { PageTransitionProvider } from "@/components/ui-self/PageTransitionProvider";
 
 const font = Manrope({ subsets: ["latin"] });
+const profont = localFont({
+  src: "../public/fonts/pro-font.woff2",
+  variable: "--font-profont",
+});
 
 export const metadata: Metadata = {
   title: "Fred Florkowski - Creative Frontend Developper",
@@ -37,17 +43,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={`relative ${font.className} dark:bg-slate-950`}>
+    <html lang="fr" suppressHydrationWarning>
+      <body className={`relative ${font.className} ${profont.variable} dark:bg-zinc-950`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange>
-          <Header />
-          <CursorFollower />
-          {children}
-          <SpeedInsights />
+          disableTransitionOnChange
+        >
+          <PageTransitionProvider>
+            <Header />
+            <CursorFollower />
+            {children}
+            <SpeedInsights />
+          </PageTransitionProvider>
         </ThemeProvider>
       </body>
       <Analytics />
