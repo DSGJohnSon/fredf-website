@@ -84,12 +84,11 @@ export default function HeroHeader() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="text-center text-6xl uppercase lg:text-8xl font-profont"
+          className="text-center font-profont uppercase text-4xl md:text-5xl lg:text-6xl"
         >
-          Hi I&apos;m
+          Salut, moi c&apos;est
           <span className="big-hovered-object fred-hover cursor-default text-rose-500">
-            {" "}
-            Fred
+            {" "}Fred
           </span>
           ,
         </motion.h1>
@@ -103,10 +102,10 @@ export default function HeroHeader() {
             Devsigner
             <LucideMessageCircleQuestion className="absolute size-3 -right-[15px] -top-[1px]" />
             <div className="absolute top-[80%] left-1/2 -translate-x-1/2 w-[200%] bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-600 rounded-xl px-1 py-2 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:top-[140%]">
-              <span className="text-xs text-wrap line-clamp-2 text-zinc-950 dark:text-zinc-50">Developper & UI/UX Designer</span>
+              <span className="text-xs text-wrap line-clamp-2 text-zinc-950 dark:text-zinc-50">Développeur & Designer UI/UX</span>
             </div>
           </span>{" "}
-          based in Lyon (FR), I transform ideas into real products
+          basé à Lyon (FR), je transforme vos idées en produits concrets
         </motion.div>
         {/* Socials Buttons */}
         <motion.div
@@ -160,7 +159,7 @@ export default function HeroHeader() {
               onClick={() => startTransition("/about")}
               className="hovered-object group cursor-pointer flex items-center gap-2 rounded-md px-4 py-2 transition duration-500 hover:bg-zinc-50 dark:hover:bg-zinc-800"
             >
-              <div className="flex items-center">About</div>
+              <div className="flex items-center">À propos</div>
               <FaArrowRight
                 size={12}
                 className="hovered-object -rotate-45 transition duration-500 group-hover:rotate-0"
@@ -170,7 +169,7 @@ export default function HeroHeader() {
               onClick={() => startTransition("/projects")}
               className="hovered-object group cursor-pointer flex items-center gap-2 rounded-md px-4 py-2 transition duration-500 hover:bg-zinc-50 dark:hover:bg-zinc-800"
             >
-              <span className="">Projects</span>
+              <span className="">Projets</span>
               <FaArrowRight
                 size={12}
                 className="hovered-object -rotate-45 transition duration-500 group-hover:rotate-0"
@@ -198,10 +197,10 @@ export default function HeroHeader() {
                   imageRandomizing ? "animate-spin" : "",
                 )}
               />
-              Discover my vibe
+              Découvrir mon univers
             </Button>
             <span className="hidden py-2 md:block">
-              Front-end Developper & Creative designer
+              Développeur front-end & Designer créatif
             </span>
           </motion.div>
         </div>

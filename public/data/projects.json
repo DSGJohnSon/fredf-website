@@ -1,0 +1,60 @@
+[
+  {
+    "slug": "serre-chevalier-parapente",
+    "title": "Serre Chevalier Parapente",
+    "tags": ["Site Web Ecommerce", "Web Application", "Dashboard de Gestion"],
+    "stack": ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Stripe", "Tailwind CSS"],
+    "thumbnail": "/images/projects/serre-chevalier-parapente/thumbnail_serre-chevalier-parapente.png",
+    "siteUrl": "https://serre-chevalier-parapente.fr",
+    "shortDescription": "Serre Chevalier Parapente est une école de parapente proposant stages et baptêmes dans un environnement alpin, avec une forte saisonnalité et des contraintes de planning importantes. L'activité repose sur une organisation précise des créneaux, des moniteurs et du matériel, tout en restant accessible au grand public.",
+    "promise": "Clément, fondateur et moniteur de l’école, consacrait une part importante de son temps à la gestion manuelle des inscriptions, des plannings et des participants. Cette charge administrative limitait sa capacité à développer l’activité et à se concentrer sur son cœur de métier : l’enseignement et l’accompagnement des élèves.",
+    "sections": [
+      {
+        "type": "image",
+        "src": "/images/projects/serre-chevalier-parapente/site-vitrine_serre-chevalier-parapente.png",
+        "alt": "Elmut Pet Food - Visuel principal"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/serre-chevalier-parapente/objectif_serre-chevalier-parapente.png",
+        "alt": "Elmut - Brandbook"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/serre-chevalier-parapente/webapp_serre-chevalier-parapente.png",
+        "alt": "Elmut - Site web"
+      }
+    ]
+  },
+  {
+    "slug": "klap",
+    "title": "Klap - Application Cinéma",
+    "tags": ["Identité visuelle", "Réflexion UX", "Protoypage Figma"],
+    "stack": ["Figma", "Adobe Illustrator", "Un papier et un crayon"],
+    "thumbnail": "/images/projects/klap/thumbnail_klap.png",
+    "shortDescription": "Projet de conception UX/UI pour une application mobile initié par le cinéma Le Coluche à Istres,  membre du réseau Scènes & Cinés regroupant plusieurs salles de cinéma et de théâtre  au sein de l’agglomération d’Istres et de ses communes partenaires.",
+    "promise": "L’offre culturelle locale souffre d’un manque de lisibilité et d’accessibilité sur mobile, en particulier pour les publics jeunes habitués à des parcours de réservation simples proposés par les grandes chaînes nationales. L’enjeu était de concevoir une expérience mobile capable de simplifier l’accès à la programmation et de faciliter la réservation, tout en valorisant les salles locales.",
+    "sections": [
+      {
+        "type": "image",
+        "src": "/images/projects/klap/thumbnail_klap.png",
+        "alt": "Studio Form - Visuel principal"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/klap/wireframe_klap.png",
+        "alt": "Studio Form - Détail"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/klap/objectif_klap.png",
+        "alt": "Studio Form - Détail"
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/klap/prototype_klap.png",
+        "alt": "Studio Form - Détail"
+      }
+    ]
+  }
+]

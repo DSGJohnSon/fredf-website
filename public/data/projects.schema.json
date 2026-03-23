@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["slug", "title", "tags", "thumbnail", "shortDescription", "promise", "sections"],
+    "additionalProperties": false,
+    "properties": {
+      "slug": {
+        "type": "string",
+        "description": "Identifiant unique du projet (URL-friendly)"
+      },
+      "title": {
+        "type": "string",
+        "description": "Titre du projet"
+      },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Catégories / types de prestation"
+      },
+      "stack": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Technologies utilisées (Next.js, Figma, Stripe…)"
+      },
+      "thumbnail": {
+        "type": "string",
+        "description": "Chemin vers l'image miniature (/images/projects/…)"
+      },
+      "siteUrl": {
+        "type": "string",
+        "format": "uri",
+        "description": "URL du site en production (optionnel)"
+      },
+      "shortDescription": {
+        "type": "string",
+        "description": "Contexte du projet"
+      },
+      "promise": {
+        "type": "string",
+        "description": "Besoin / problématique client"
+      },
+      "sections": {
+        "type": "array",
+        "description": "Blocs de contenu de la page projet",
+        "items": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": ["type", "src", "alt"],
+              "additionalProperties": false,
+              "properties": {
+                "type": { "type": "string", "enum": ["image"] },
+                "src": { "type": "string", "description": "Chemin vers l'image" },
+                "alt": { "type": "string", "description": "Texte alternatif" }
+              }
+            },
+            {
+              "type": "object",
+              "required": ["type"],
+              "additionalProperties": false,
+              "properties": {
+                "type": { "type": "string", "enum": ["text"] },
+                "title": { "type": "string" },
+                "paragraphs": { "type": "array", "items": { "type": "string" } },
+                "list": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
