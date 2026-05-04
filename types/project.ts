@@ -16,6 +16,7 @@ export type ContentSection = ImageSection | TextSection;
 export type Project = {
   slug: string;
   title: string;
+  date: string;
   tags: string[];
   stack?: string[];
   thumbnail: string;

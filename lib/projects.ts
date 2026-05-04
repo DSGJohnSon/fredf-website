@@ -1,4 +1,4 @@
 import type { Project } from "@/types/project";
-import data from "@/public/data/projects.json";
+import { projects as data } from "@/public/data/projects";
 
 export const projects = data as Project[];
