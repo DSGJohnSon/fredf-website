@@ -27,6 +27,7 @@ export default function ProjectFooter({ otherProjects }: { otherProjects: Projec
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {otherProjects.map((p) => (
               <ProjectCard
+                date={p.date}
                 key={p.slug}
                 slug={p.slug}
                 title={p.title}
